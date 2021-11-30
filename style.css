@@ -151,6 +151,7 @@ section {
 
 .imgradient > img {
   height: 100%;
+  width: auto;
   z-index: 1
 }
 
