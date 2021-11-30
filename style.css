@@ -149,7 +149,7 @@ section {
   left: 0
 }
 
-.imgradient > img {
+.imgradient img {
   height: 100%;
   width: auto;
   z-index: 1
