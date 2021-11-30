@@ -1,0 +1,258 @@
+/* fira-sans-300 - latin-ext_latin */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+       url('./fonts/fira-sans-v11-latin-ext_latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('./fonts/fira-sans-v11-latin-ext_latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* fira-sans-500 - latin-ext_latin */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('./fonts/fira-sans-v11-latin-ext_latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('./fonts/fira-sans-v11-latin-ext_latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* define project colors */
+:root {
+  --dark: #060644;
+  --darker: #000000;
+  --light: #F0F0EA;
+  --lighter: #ffffff;
+}
+
+html {
+  background: #edf0f2
+}
+
+body {
+  margin: 0;
+  background: var(--lighter);
+  font-family: Fira Sans, sans;
+  font-weight: 300;
+  box-shadow: 0 2px 8px rgb(14 19 24 / 14%);
+  max-width: 1440px;
+  line-height: 1.5
+}
+
+@media (min-width: 1440px) {
+  body {
+      margin: 3rem auto 0 auto;
+  }
+}
+
+header {
+  height: 3.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 3.4rem;
+}
+
+.logo {
+  font-size: 1.4rem;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  user-select: none;
+  text-decoration: none;
+  color: var(--dark)
+}
+
+footer {
+  background: var(--light);
+  margin-top: 3.6rem;
+  padding: 1.6rem 3.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* headings */
+
+h1, h2, h3, h4 {
+  color: var(--dark);
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin:0;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin: 0;
+  margin-bottom: 1.2rem
+}
+
+.subtleh {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 8px 1.5rem;
+}
+
+.intro {
+  background: var(--light);
+  display: flex;
+  justify-content: space-between;
+  max-width: none;
+  padding: 0
+}
+
+.introcontainer {
+  padding: 0 3.4rem;
+  margin: auto 0
+}
+
+.introcontainer > p {
+  font-size: 1.45rem;
+  margin:0;
+  margin-bottom: 1.3rem;
+}
+
+.abtn {
+  color: var(--lighter);
+  background: var(--dark);
+  padding: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  width: fit-content;
+  border: none;
+  font-family: Fira sans;
+  cursor: pointer;
+}
+
+.imgradient {
+  height: calc(75vh - 3rem);
+  max-height: 620px;
+  position: relative
+}
+
+.imgradient > div {
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background: linear-gradient(90deg, var(--light) 0%, #ffffff00 50%);
+  position: absolute;
+  top: 0;
+  left: 0
+}
+
+.imgradient > img {
+  height: 100%;
+  z-index: 1
+}
+
+
+.threecol {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.2rem
+}
+
+
+
+.edbox {
+  background: var(--light);
+  padding: 1.2rem;
+}
+
+.upp {
+  text-transform: uppercase;
+}
+
+.sixcol {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 0;
+  list-style-type: none;
+  gap: 1.2rem
+}
+
+.tools {
+  background: var(--light);
+  padding-bottom: 100%;
+  position: relative;
+}
+
+.toolsc {
+  padding: 1.2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.toolsc > p {
+  margin:0;
+}
+
+.toolsc > p:first-child {
+  color: var(--dark);
+  font-weight: 500;
+}
+
+form {
+  display: grid;
+  padding: 1.2rem;
+  gap: 1.2rem;
+  background: var(--light);
+}
+
+label {
+  display: flex;
+    flex-direction: column;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+input {
+  border: none;
+    background: none;
+    border-bottom: 1px solid rgb(0 0 0 / 20%);
+    height: 1.6rem;
+    font-size: 1rem;
+    font-family: Fira sans;
+    font-weight: 300;
+    padding: 0.3rem 0;
+}
+
+textarea {
+  border: none;
+    background: none;
+    border-bottom: 1px solid rgb(0 0 0 / 20%);
+    height: 6rem;
+    font-size: 1rem;
+    font-family: Fira sans;
+    font-weight: 300;
+    padding: 0.3rem 0;
+}
+
+textarea:focus-visible, input:focus-visible {
+  outline-offset: 3px;
+}
+
+.m0 {
+  margin: 0
+}
+
+svg:hover > #heartcover {
+  opacity: 0
+}
+
+#heartcover {
+  transition: all .25s ease-in-out
+}
