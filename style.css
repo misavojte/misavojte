@@ -257,3 +257,45 @@ svg:hover > #heartcover {
 #heartcover {
   transition: all .25s ease-in-out
 }
+
+
+.portobox {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+
+.portooverlay {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  top: 100%;
+  left: 0;
+  background: var(--light);
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  padding: 1.2rem;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  color: var(--darker);
+  text-decoration: none;
+  outline-offset: -3px;
+}
+
+.portobox:hover .portooverlay, .portooverlay:focus-visible {
+  top: 0;
+}
+
+.portooverlay:not(:focus) {
+  transition: all .3s ease-in-out;
+}
+
+.portobox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%
+}
