@@ -35,29 +35,22 @@ body {
   font-family: Fira Sans, sans;
   font-weight: 300;
   box-shadow: 0 2px 8px rgb(14 19 24 / 14%);
-  max-width: 1440px;
   line-height: 1.5
 }
 
-@media (min-width: 1440px) {
-  body {
-      margin: 3rem auto 0 auto;
-  }
-}
 
 header {
-  height: 3.4rem;
+  height: 3.2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 3.4rem;
+  box-shadow: #0000001f 3px 3px 5px 0;
+  position: relative;
+  font-size: 1.2rem;
+  z-index: 42
 }
 
 .logo {
-  font-size: 1.4rem;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  user-select: none;
   text-decoration: none;
   color: var(--dark)
 }
@@ -65,9 +58,20 @@ header {
 footer {
   background: var(--light);
   margin-top: 3.6rem;
-  padding: 1.6rem 3.4rem;
+  padding: 1.6rem 0;
+}
+
+.holder-in, .holder-fh {
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+  box-sizing: border-box
+}
+
+.holder-fh {
   display: flex;
   justify-content: space-between;
+  padding: 0px 3.4rem;
 }
 
 /* headings */
@@ -75,12 +79,12 @@ footer {
 h1, h2, h3, h4 {
   color: var(--dark);
   font-weight: 500;
+  line-height: 1.2
 }
 
 h1 {
   font-size: 2.8rem;
   margin:0;
-  margin-bottom: 1rem;
 }
 
 h3 {
@@ -96,22 +100,32 @@ h3 {
 }
 
 section {
-  max-width: 1000px;
+  max-width: 1024px;
   margin: auto;
   padding: 8px 1.5rem;
+  box-sizing: border-box;
 }
 
 .intro {
   background: var(--light);
+  max-width: none;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: #0000002e 3px 3px 5px 0;
+}
+
+.holder-in {
   display: flex;
   justify-content: space-between;
-  max-width: none;
-  padding: 0
 }
 
 .introcontainer {
-  padding: 0 3.4rem;
-  margin: auto 0
+  padding: 3rem 3.4rem;
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 50%
 }
 
 .introcontainer > p {
@@ -131,32 +145,35 @@ section {
   border: none;
   font-family: Fira sans;
   cursor: pointer;
+  box-shadow: #0000002e 3px 3px 5px 0;
 }
 
 .imgradient {
-  height: calc(75vh - 3rem);
-  max-height: 620px;
+  height: 500px;
+  margin-top: auto;
   position: relative
 }
 
 .imgradient > div {
-  height: 100%;
-  width: 100%;
-  z-index: 2;
-  background: linear-gradient(90deg, var(--light) 0%, #ffffff00 50%);
+  width: 150%;
+  padding-bottom: 150%;
+  background: #e4e4df;
   position: absolute;
-  top: 0;
-  left: 0
+  bottom: 20%;
+  border-radius: 50%;
+  box-shadow: #0000002e -3px -3px 5px 0;
 }
 
 .imgradient img {
-  height: 100%;
+  height: 120%;
   width: auto;
-  z-index: 1
+  z-index: 2;
+  position: relative;
+  display: block;
 }
 
 
-.threecol {
+.threecol1, .threecol2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1.2rem
@@ -167,6 +184,7 @@ section {
 .edbox {
   background: var(--light);
   padding: 1.2rem;
+  box-shadow: #0000002e 3px 3px 5px 0;
 }
 
 .upp {
@@ -185,6 +203,7 @@ section {
   background: var(--light);
   padding-bottom: 100%;
   position: relative;
+  box-shadow: #0000002e 3px 3px 5px 0;
 }
 
 .toolsc {
@@ -204,6 +223,7 @@ section {
 .toolsc > p:first-child {
   color: var(--dark);
   font-weight: 500;
+  line-height: 1.2
 }
 
 form {
@@ -211,6 +231,7 @@ form {
   padding: 1.2rem;
   gap: 1.2rem;
   background: var(--light);
+  box-shadow: #0000002e 3px 3px 5px 0;
 }
 
 label {
@@ -264,6 +285,7 @@ svg:hover > #heartcover {
   width: 100%;
   padding-bottom: 100%;
   overflow: hidden;
+  box-shadow: #0000002e 3px 3px 5px 0;
 }
 
 .portooverlay {
@@ -298,4 +320,105 @@ svg:hover > #heartcover {
   left: 0;
   width: 100%;
   height: 100%
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .holder-fh, .introcontainer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem
+  }
+  .edbox, .toolsc, .portooverlay, form {
+    padding: 0.8rem
+  }
+  .imgradient {
+    height: 450px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  h1 {
+    font-size: 2.2rem;
+  }
+  .subtleh {
+    font-size: 1.25rem
+  }
+  h3 {
+    font-size: 1.7rem
+  }
+  .threecol2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .threecol1 {
+    grid-template-columns: 1fr;
+  }
+  .introcontainer {
+    padding-right: 0;
+  }
+  .introcontainer > p {
+    font-size: 1.2rem
+  }
+  .imgradient > div {
+    left: 1.5rem;
+  }
+  .sixcol {
+    grid-template-columns: repeat(4, 1fr)
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .holder-in {
+    flex-direction: column;
+  }
+  .introcontainer {
+    padding-right: 1.5rem;
+    padding-bottom: 0
+  }
+  .imgradient picture {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .imgradient img {
+    height: auto;
+    width: 100%;
+  }
+  .imgradient > div {
+    bottom: -60%;
+margin-left: -25%;
+left: 0;
+  }
+  .imgradient {
+    height: auto;
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .threecol2 {
+      grid-template-columns: 1fr;
+  }
+  .sixcol {
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .introcontainer {
+    padding-top: 1.5rem;
+  }
+  footer .holder-fh {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .holder-fh, .introcontainer, section {
+    padding-left: .8rem;
+    padding-right: .8rem;
+}
+  .sixcol, .threecol1, .threecol2, .holder-fh {
+    gap: .8rem
+  }
+  .toolsc, .edbox, .portoverlay, form {padding: .6rem}
 }
